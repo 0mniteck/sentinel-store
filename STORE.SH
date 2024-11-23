@@ -1,7 +1,7 @@
 #!/bin/bash
 #rough draft
 
-ffmpeg -f v4l2 -i /dev/video0 -c:v libx264 -qp 0 output.mp4
+timeout 1h ffmpeg -f v4l2 -i /dev/video4 -c:v libx264 -crf 2 -display_hflip output.mp4; exit 0
 
 # Set the storage pool directory
 POOL_DIR="/path/to/storage/pool"
